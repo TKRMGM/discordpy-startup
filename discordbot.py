@@ -14,11 +14,11 @@ async def greeting_gm():
     channel = client.get_channel('718811732243382345')
     while True:
         print(datetime.datetime.now().minute)
-        if(datetime.datetime.now().minute==59):
+        if(datetime.datetime.now().minute==00):
             print("eeee")
             await client.send_message(channel, 'おはよう' + str(datetime.datetime.now()))
             await asyncio.sleep(55)
-        elif(datetime.datetime.now().minute==60):
+        elif(datetime.datetime.now().minute==01):
             await client.send_message(channel, 'gtegegeegう' + str(datetime.datetime.now()))
             await asyncio.sleep(55)
         else:
@@ -33,6 +33,6 @@ async def on_message(message):
     # 「/neko」と発言したら「にゃーん」が返る処理
     if message.content == '/neko':
         #await client.send_message(channel,'にゃーん')
-        await message.channel.send("メッセージ")
+        await client.send_message(channel,"メッセージ")
 
 client.run(token)

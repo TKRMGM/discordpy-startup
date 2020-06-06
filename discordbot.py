@@ -15,17 +15,17 @@ async def greeting_gm():
     while True:
         print(datetime.datetime.now().minute)
         if(datetime.datetime.now().minute==47):
-            await message.channel.send('  ( ☞三☞´3｀ )☞三☞それそれたそー')
+            print("いくわよ～女学院")
             await asyncio.sleep(1)
         if(datetime.datetime.now().minute==48):
             print("eeee")
-            await message.channel.send('おはよう' + str(datetime.datetime.now()))
+            await client.send_message(channel, 'おはよう' + str(datetime.datetime.now()))
             await asyncio.sleep(55)
         elif(datetime.datetime.now().minute==49):
-            await message.channel.send('gtegegeegう' + str(datetime.datetime.now()))
+            await client.send_message(channel, 'gtegegeegう' + str(datetime.datetime.now()))
             await asyncio.sleep(55)
         else:
-            await asyncio.sleep(1)
+            await asyncio.sleep(55)
 
 @client.event
 async def on_message(message):

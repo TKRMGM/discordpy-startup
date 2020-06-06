@@ -46,7 +46,7 @@ async def on_message(message):
     if message.content == 'いんむ':
         await client.send_message(channel,'ホモガキ失せろ')
     else:
-        reply = f'{message.author.mention} 呼んだ？' # 返信メッセージの作成
-        await client.send_message(reply) # 返信メッセージを送信
+        reply = message.author.mention + 呼んだ？' # 返信メッセージの作成
+        await client.send_message(channel,reply) # 返信メッセージを送信
 
 client.run(token)

@@ -14,15 +14,15 @@ async def greeting_gm():
     channel = client.get_channel('718811732243382345')
     while True:
         print(datetime.datetime.now().minute)
-        if(datetime.datetime.now().minute==0):
+        if(datetime.datetime.now().minute==4):
             print("eeee")
             await client.send_message(channel, 'おはよう' + str(datetime.datetime.now()))
-            await asyncio.sleep(55)
-        elif(datetime.datetime.now().minute==1):
+            await asyncio.sleep(1)
+        elif(datetime.datetime.now().minute==5):
             await client.send_message(channel, 'gtegegeegう' + str(datetime.datetime.now()))
-            await asyncio.sleep(55)
+            await asyncio.sleep(1)
         else:
-            await asyncio.sleep(55)
+            await asyncio.sleep(1)
 
 @client.event
 async def on_message(message):

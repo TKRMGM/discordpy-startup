@@ -14,12 +14,10 @@ async def greeting_gm():
     channel = client.get_channel('718811732243382345')
     while True:
         #print(datetime.datetime.now().minute)
-        if(datetime.datetime.now().minute==2):
-            print("いくわよ～女学院")
-            await asyncio.sleep(1)
+        
             
         if(datetime.datetime.now().hour==23):
-            if(datetime.datetime.now().minute==43):
+            if(datetime.datetime.now().minute==45):
                 if(datetime.datetime.now().second==1):
                     await client.send_message(channel,'おはよう' + str(datetime.datetime.now()))
                     await asyncio.sleep(1)

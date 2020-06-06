@@ -11,17 +11,18 @@ async def on_ready():
     asyncio.ensure_future(greeting_gm())
 
 async def greeting_gm():
-    
+    channel = client.get_channel('718811732243382345')
     while True:
-        channel = client.get_channel('718811732243382345')
-        
         print(datetime.datetime.now().minute)
-        if(datetime.datetime.now().minute==14):
-            print("eeee")
-            await client.send_message(channel, 'おはよう' + str(datetime.datetime.now()))
+        if(datetime.datetime.now().minute==2):
+            print("いくわよ～女学院")
             await asyncio.sleep(1)
-        elif(datetime.datetime.now().minute==15):
-            await client.send_message(channel, 'gtegegeegう' + str(datetime.datetime.now()))
+        if(datetime.datetime.now().minute==16):
+            print("eeee")
+            await client.send_message(channel,'おはよう' + str(datetime.datetime.now()))
+            await asyncio.sleep(1)
+        elif(datetime.datetime.now().minute==17):
+            await client.send_message(channel,'gtegegeegう' + str(datetime.datetime.now()))
             await asyncio.sleep(1)
         else:
             await asyncio.sleep(1)
@@ -34,7 +35,6 @@ async def on_message(message):
         return
     # 「/neko」と発言したら「にゃーん」が返る処理
     if message.content == '/neko':
-        #await client.send_message(channel,'にゃーん')
-        await client.send_message(channel,"メッセージ")
+        await client.send_message(channel,'にゃーん')
 
 client.run(token)

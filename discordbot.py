@@ -19,7 +19,7 @@ async def greeting_gm():
             await asyncio.sleep(1)
             
         if(datetime.datetime.now().hour==23):
-            if(datetime.datetime.now().minute==38):
+            if(datetime.datetime.now().minute==40):
                 if(datetime.datetime.now().second==1):
                     await client.send_message(channel,'おはよう' + str(datetime.datetime.now()))
                     await asyncio.sleep(1)
@@ -52,6 +52,6 @@ async def on_message(message):
     if message.content == 'いんむ':
         await client.send_message(channel,'ホモガキ失せろ')
     else:
-        await client.send_message(channel,message + "ってなーに？")
+        await client.send_message(channel,str(message) + "ってなーに？")
 
 client.run(token)

@@ -26,7 +26,7 @@ async def greeting_gm():
 @client.event
 async def on_message(message):
     # メッセージ送信者がBotだった場合は無視する
-    channel = client.get_channel('485334545608998912')
+    channel = client.get_channel('718811732243382345')
     if message.author.bot:
         return
     # 「/neko」と発言したら「にゃーん」が返る処理

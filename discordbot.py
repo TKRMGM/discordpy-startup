@@ -17,7 +17,7 @@ async def greeting_gm():
         
             
         if(datetime.datetime.now().hour==23):
-            if(datetime.datetime.now().minute==45):
+            if(datetime.datetime.now().minute==47):
                 if(datetime.datetime.now().second==1):
                     await client.send_message(channel,'おはよう' + str(datetime.datetime.now()))
                     await asyncio.sleep(1)

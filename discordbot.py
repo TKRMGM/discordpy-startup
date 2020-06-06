@@ -11,15 +11,17 @@ async def on_ready():
     asyncio.ensure_future(greeting_gm())
 
 async def greeting_gm():
-    channel = client.get_channel('718811732243382345')
+    
     while True:
+        channel = client.get_channel('718811732243382345')
+        
         print(datetime.datetime.now().minute)
-        if(datetime.datetime.now().minute==10):
+        if(datetime.datetime.now().minute==14):
             print("eeee")
-            await channel.send('おはよう' + str(datetime.datetime.now()))
+            await client.send_message(channel, 'おはよう' + str(datetime.datetime.now()))
             await asyncio.sleep(1)
-        elif(datetime.datetime.now().minute==11):
-            await channel.send('gtegegeegう' + str(datetime.datetime.now()))
+        elif(datetime.datetime.now().minute==15):
+            await client.send_message(channel, 'gtegegeegう' + str(datetime.datetime.now()))
             await asyncio.sleep(1)
         else:
             await asyncio.sleep(1)

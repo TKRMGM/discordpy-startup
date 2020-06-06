@@ -17,11 +17,11 @@ async def greeting_gm():
         if(datetime.datetime.now().minute==2):
             print("いくわよ～女学院")
             await asyncio.sleep(1)
-        if(datetime.datetime.now().minute==16):
+        if(datetime.datetime.now().minute==17):
             print("eeee")
             await client.send_message(channel,'おはよう' + str(datetime.datetime.now()))
             await asyncio.sleep(1)
-        elif(datetime.datetime.now().minute==17):
+        elif(datetime.datetime.now().minute==18):
             await client.send_message(channel,'gtegegeegう' + str(datetime.datetime.now()))
             await asyncio.sleep(1)
         else:
